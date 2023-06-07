@@ -1,0 +1,172 @@
+.container__main__header {
+  height: 60px;
+  padding: 0em 2em;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--backgroundDarkColor);
+  margin-bottom: 1.5em;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+.container__main__header__left {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.container__main__header__left__heading {
+  font-size: 18px;
+}
+.container__main__header__left__button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1em;
+  border: none;
+  background-color: var(--backgroundColor);
+  cursor: pointer;
+}
+.container__main__header__left__button svg {
+  width: 18px;
+  height: 19px;
+  stroke-width: 1.8px;
+}
+.container__main__header__left__button:hover {
+  background-color: var(--primary);
+  color: var(--colorReverse);
+}
+.container__main__header__left__button__menu {
+  display: none;
+}
+.container__main__header__left__icon {
+  margin-right: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container__main__header__right {
+  display: flex;
+  align-items: center;
+}
+.container__main__header__right__panel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-right: 1em;
+}
+.container__main__header__right__panel__main {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  padding: 0.3em 1em;
+  min-width: 150px;
+  background-color: var(--backgroundColor);
+  cursor: pointer;
+  height: 43px;
+}
+.container__main__header__right__panel__main__img {
+  margin-right: 0.7em;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+}
+.container__main__header__right__panel__main svg {
+  margin-left: 0.5em;
+}
+.container__main__header__right__panel__main__label {
+  flex: 1;
+  text-align: left;
+}
+.container__main__header__right__panel__content {
+  position: absolute;
+  top: 55px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundColor);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 1em;
+  border-radius: 10px;
+}
+.container__main__header__right__panel__content__entry {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--color);
+}
+.container__main__header__right__panel__content__entry svg {
+  margin-right: 0.5em;
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5px;
+  stroke: var(--color);
+}
+.container__main__header__right__panel__content__entry:hover {
+  color: var(--primary);
+}
+.container__main__header__right__panel__content__entry:hover svg {
+  stroke: var(--primary);
+}
+.container__main__header__right__panel__content__entry:last-child {
+  margin-bottom: 0em;
+}
+.container__main__header__right__button {
+  background-color: var(--backgroundColor);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  padding: 0em;
+  align-items: center;
+  justify-content: center;
+}
+.container__main__header__right__button .theme-toggle {
+  size: 1.5rem !important;
+  --size: 1.5rem !important;
+}
+@media (max-width: 820px) {
+  .container__main__header__left__button__menu {
+    display: flex;
+  }
+  .container__main__header__right__panel {
+    margin-right: 0.5em;
+  }
+  .container__main__header__right__panel__main {
+    min-width: fit-content;
+    border-radius: 50px;
+    padding: 0.5em;
+  }
+  .container__main__header__right__panel__main svg {
+    display: none;
+  }
+  .container__main__header__right__panel__main__label {
+    display: none;
+  }
+  .container__main__header__right__panel__main__img {
+    margin-right: 0em;
+  }
+  .container__main__header__right__panel__content {
+    width: fit-content;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 1em;
+  }
+  .container__main__header {
+    padding: 0em 1em;
+  }
+  .container__main__header__left {
+    font-size: 14px;
+  }
+  .container__main__header__left__heading {
+    display: none;
+  }
+}

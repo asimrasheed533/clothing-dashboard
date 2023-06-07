@@ -1,0 +1,166 @@
+.customer__detail__popup {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+.customer__detail__popup__overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  background-color: var(--transparentColor);
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+.customer__detail__popup__overlay__card {
+  height: fit-content;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 2em);
+  max-width: 500px;
+  padding: 2em;
+  background-color: var(--backgroundDarkColor);
+  border-radius: 8px;
+  position: relative;
+}
+.customer__detail__popup__overlay__card__close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  background-color: var(--primary);
+}
+.customer__detail__popup__overlay__card__close svg {
+  color: var(--colorReverse);
+}
+.customer__detail__popup__overlay__card__heading {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+.customer__detail__popup__overlay__card__detail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2em 0em;
+}
+.customer__detail__popup__overlay__card__detail input {
+  width: 100%;
+  height: 43px;
+  border-radius: 0px;
+  border: 1px solid var(--backgroundColor);
+  background-color: var(--backgroundColor);
+  outline: 1px solid transparent;
+  padding: 0em 1.5em;
+  border-radius: 10px;
+}
+.customer__detail__popup__overlay__card__detail input:hover {
+  border: 1px solid var(--primary);
+  transition: 300ms ease-in-out;
+}
+.customer__detail__popup__overlay__card__detail input:focus {
+  transition: 300ms ease-in-out;
+  outline: 1px solid var(--primary);
+}
+.customer__detail__popup__overlay__card__detail input:first-child {
+  margin-bottom: 1.5em;
+}
+.container__main__content__listing__header__right__button__btn {
+  background-color: var(--primary);
+  padding: 0.6em 2em;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  color: var(--colorReverse);
+  text-decoration: none;
+}
+.container__main__content__listing__header__right__button__btn:hover {
+  background-color: var(--primaryDark);
+}
+.customer__detail__popup__overlay__card__submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.customer__detail__popup__overlay__card__submit button {
+  background-color: var(--primary);
+  color: white;
+  height: 40px;
+  padding: 0em 2em;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.customer__detail__popup__overlay__card__submit button:hover {
+  background-color: var(--primaryDark);
+}
+.customer__detail__popup__overlay__card__submit__discount {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.customer__detail__popup__overlay__card__submit__discount button {
+  background-color: transparent;
+  color: var(--primary);
+  height: 40px;
+  padding: 0em 2em;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.customer__detail__popup__overlay__card__submit__discount button:hover {
+  background-color: var(--primaryDark);
+  color: var(--colorReverse);
+}
+.customer__detail__popup__overlay__card__detail__entry {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: var(--backgroundColor);
+  margin-bottom: 0.5em;
+  padding: 0em 2em;
+  border-radius: 10px;
+  color: var(--color);
+}
+.customer__detail__popup__overlay__card__detail__entry:hover {
+  background-color: var(--primary);
+  color: var(--colorReverse);
+}
+.container__main__content__details__main__heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+@media (max-width: 400px) {
+  .customer__detail__popup__overlay {
+    padding: 1em;
+  }
+}

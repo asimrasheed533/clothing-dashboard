@@ -1,0 +1,233 @@
+:root {
+  --ck-color-base-focus: --primary !important;
+}
+.container__main__content__details__main__special {
+  flex-direction: column;
+}
+.container__main__content__details__main__row {
+  display: flex;
+  width: 100%;
+}
+
+.container__main__content__details__main__row__entry {
+  width: 50%;
+}
+.container__main__content__details__main__row__entry:first-child {
+  margin-right: 3em;
+}
+.container__main__content__details__main__row__entry__checkbox {
+  width: 50%;
+  display: flex;
+  margin-bottom: 1em;
+}
+.container__main__content__details__main__row__entry__checkbox__heading {
+  font-weight: bold;
+}
+.container__main__content__details__main__row__entry__checkbox:first-child {
+  margin-right: 3em;
+}
+.container__main__content__details__main__input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2em;
+}
+.container__main__content__details__main__input__label {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.container__main__content__details__main__input__field__wrapper {
+  display: flex;
+  border-radius: 50px;
+  background-color: var(--backgroundColor);
+  height: 40px;
+  border: 1px solid var(--backgroundColor);
+  outline: 1px solid var(--backgroundColor);
+}
+.container__main__content__details__main__input__field__wrapper
+  .css-b62m3t-container {
+  width: 100%;
+}
+.container__main__content__details__main__input__field__wrapper
+  .css-1im77uy-control {
+  border-radius: 50px;
+  border: none;
+  background-color: transparent;
+  padding: 0em 0.8em;
+}
+.container__main__content__details__main__input__field__wrapper
+  .css-s9p5rr-control {
+  border-radius: 50px;
+  border: none;
+  background-color: transparent;
+  padding: 0em 0.8em;
+}
+.container__main__content__details__main__input__field__wrapper__textarea {
+  height: fit-content;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.container__main__content__details__main__input__field__wrapper__textarea
+  textarea {
+  min-height: 200px;
+  padding: 1em 1.5em;
+}
+.container__main__content__details__main__input__field__wrapper__textarea
+  .ck-editor {
+  background-color: transparent !important;
+  width: 100% !important;
+}
+.container__main__content__details__main__input__field__wrapper__textarea
+  .ck-editor
+  * {
+  box-shadow: none !important;
+}
+.container__main__content__details__main__input__field__wrapper__textarea
+  .ck-toolbar {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0em 1em !important;
+}
+.container__main__content__details__main__input__field__wrapper__textarea
+  .ck-toolbar
+  * {
+  font-size: 12px !important;
+}
+.container__main__content__details__main__input__field__wrapper__textarea
+  .ck-editor
+  *
+  svg {
+  width: 18px;
+  height: 18px;
+}
+.container__main__content__details__main__input__field__wrapper__textarea
+  .ck-content {
+  min-height: 200px;
+  max-height: 200px;
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: none !important;
+  border-top-color: var(--color) !important;
+  padding: 0em 1.5em !important;
+  background-color: transparent !important;
+}
+.container__main__content__details__main__input__field__wrapper:hover {
+  border-color: var(--primary);
+}
+.container__main__content__details__main__input__field__wrapper:focus-within {
+  border-color: var(--primary);
+  outline-color: var(--primary);
+}
+.container__main__content__details__main__input__field {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0em 1.5em;
+  height: 100%;
+  border-radius: 50px;
+}
+.container__main__content__details__main__input__button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0em;
+  width: 40px;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+.container__main__content__details__main__input__button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.container__main__content__details__main__input__error {
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  bottom: -20px;
+}
+.container__main__content__details__main__row__uploader {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.container__main__content__details__main__row__img__uploader {
+  background-color: var(--backgroundColor);
+  min-height: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.container__main__content__details__main__row__img__uploader input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container__main__content__details__main__row__img__uploader__content svg {
+  color: var(--color);
+  width: 30px;
+  height: 30px;
+}
+.container__main__content__details__main__row__img__uploader__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .container__main__content__details__main__row {
+    flex-direction: column;
+  }
+  .container__main__content__details__main__row__entry {
+    width: 100%;
+    margin-right: 0em;
+  }
+  .container__main__content__details__main__row__entry__checkbox {
+    width: 100%;
+    margin-right: 0em;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: var(--color);
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.container__main__content__details__main__row__wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

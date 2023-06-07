@@ -1,0 +1,205 @@
+.order__create {
+  display: flex;
+}
+.order__create__col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.order__create__col:last-child {
+  max-width: 450px;
+  margin-left: 1.5em;
+}
+.order__create__panel {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 2.5em;
+  background-color: var(--backgroundDarkColor);
+  margin-bottom: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+.order__create__panel__heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.order__create__panel__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.order__create__panel__row__entry {
+  color: var(--colorLight);
+}
+.order__create__panel__row__entry:first-child {
+  color: var(--color);
+  font-weight: bold;
+}
+.order__create__panel__row__entry:first-child span {
+  margin-left: 3em;
+  font-weight: 400;
+}
+.order__create__panel__form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.order__create__panel__form__search {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  flex: 1;
+  padding-left: 1em;
+  border: 1px solid var(--colorLight);
+  margin-right: 1em;
+  border-radius: 5px;
+}
+.order__create__panel__form__search svg {
+  stroke: var(--colorLight);
+}
+.order__create__panel__form__search__input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 1em;
+  outline: none;
+}
+.order__create__panel__form__search__input::placeholder {
+  color: var(--colorLight);
+}
+.order__create__panel__form__button {
+  height: 40px;
+  padding: 0em 2em;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+.order__create__panel__form__button:hover {
+  background-color: var(--primaryDark);
+}
+.order__create__panel__table {
+  display: flex;
+  flex-direction: column;
+}
+.order__create__panel__table__header {
+  display: flex;
+  margin-bottom: 1em;
+}
+.order__create__panel__table__header__entry {
+  width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 1em;
+}
+.order__create__panel__table__header__entry:first-child {
+  flex: 1;
+}
+.order__create__panel__table__header__entry:last-child {
+  margin-right: calc(1em + 20px);
+}
+.order__create__panel__table__entry {
+  display: flex;
+  margin-bottom: 1em;
+}
+.order__create__panel__table__entry button {
+  padding: 0em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.order__create__panel__table__entry button:hover svg {
+  stroke: red;
+}
+.order__create__panel__table__entry__entry {
+  width: 100px;
+  font-size: 14px;
+  display: flex;
+  margin-right: 1em;
+  align-items: center;
+}
+.order__create__panel__table__entry__entry:first-child {
+  flex: 1;
+}
+.order__create__panel__table__entry__entry__input {
+  width: 90%;
+  height: 35px;
+  padding: 0em 1em;
+  border-radius: 5px;
+  border: 1px solid var(--colorLight);
+  background-color: transparent;
+}
+.order__create__panel__table__entry__entry__content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+.order__create__panel__actions {
+  display: flex;
+  max-width: 400px;
+  margin-left: auto;
+  width: 100%;
+}
+.customer__detail__popup__overlay__product__entry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  padding: 1em;
+}
+.customer__detail__popup__overlay__product__entry:hover {
+  background-color: var(--backgroundColor);
+}
+.customer__detail__popup__overlay__product__entry__active {
+  background-color: var(--primary);
+}
+.customer__detail__popup__overlay__product__entry__active * {
+  color: white;
+}
+.customer__detail__popup__overlay__product__entry__active:hover {
+  background-color: var(--primary);
+}
+.customer__detail__popup__overlay__product__entry__name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0em 1em;
+}
+.customer__detail__popup__overlay__product__entry__price {
+  margin-left: 1em;
+}
+@media (max-width: 1300px) {
+  .order__create {
+    flex-direction: column;
+  }
+  .order__create__col:last-child {
+    margin-left: 0em;
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .order__create__panel__table {
+    margin-top: 1em;
+  }
+  .order__create__panel__table__header {
+    display: none;
+  }
+  .order__create__panel__table__entry {
+    flex-direction: column;
+  }
+  .order__create__panel__table__entry__entry {
+    width: 100%;
+    margin-right: 0em;
+    margin-bottom: 1em;
+  }
+  .order__create__panel__table__entry button {
+    margin-right: auto;
+  }
+  .order__create__panel__table__entry__entry__input {
+    width: 100%;
+  }
+}
