@@ -20,9 +20,9 @@ html[data-theme="dark"] {
 }
 
 :root {
-  --primary: #00a827;
-  --primaryDark: #23963e;
-  --secondary: #20c068;
+  --primary: #2a5e59;
+  --primaryDark: #4d7a76;
+  --secondary: #2a5e59;
   --secondaryDark: #dbd6d3;
 }
 *,
@@ -111,7 +111,6 @@ body {
 @supports (cx: 1) {
   [data-theme="dark"] .sun-and-moon > .moon > circle {
     transform: translate(0);
-    cx: 17;
   }
 }
 @media (prefers-reduced-motion: no-preference) {

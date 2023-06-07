@@ -1,57 +1,75 @@
-import {
-  Area,
-  AreaChart,
-  Bar,
-  BarChart,
-  CartesianGrid,
-  ComposedChart,
-  Line,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 export default function Chart() {
   const data = [
     {
-      name: "Page A",
+      name: "jun",
       uv: 4000,
       pv: 2400,
       amt: 2400,
     },
     {
-      name: "Page B",
+      name: "Feb",
       uv: 3000,
       pv: 1398,
       amt: 2210,
     },
     {
-      name: "Page C",
-      uv: -1000,
+      name: "Mar",
+      uv: 2000,
       pv: 9800,
       amt: 2290,
     },
     {
-      name: "Page D",
-      uv: 500,
+      name: "Apr",
+      uv: 2780,
       pv: 3908,
       amt: 2000,
     },
     {
-      name: "Page E",
-      uv: -2000,
+      name: "May",
+      uv: 1890,
       pv: 4800,
       amt: 2181,
     },
     {
-      name: "Page F",
-      uv: -250,
+      name: "June",
+      uv: 2390,
       pv: 3800,
       amt: 2500,
     },
     {
-      name: "Page G",
+      name: "July",
+      uv: 2590,
+      pv: 3300,
+      amt: 1100,
+    },
+    {
+      name: "Aug",
+      uv: 1500,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: "Sep",
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: "Oct",
+      uv: 1090,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: "Nov",
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: "Dec",
       uv: 3490,
       pv: 4300,
       amt: 2100,
@@ -59,7 +77,7 @@ export default function Chart() {
   ];
   return (
     <ResponsiveContainer width="100%" height={200}>
-      <AreaChart
+      <BarChart
         width={10}
         height={40}
         data={data}
@@ -69,18 +87,11 @@ export default function Chart() {
       >
         <XAxis dataKey="name" />
         <YAxis />
-        <Tooltip />
-        <CartesianGrid stroke="#9F9F9F" strokeDasharray="5 5" />
-        <Bar type="monotone" dataKey="uv" stroke="red" strokeWidth={2} />
-        <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+        {/* <Tooltip /> */}
+        {/* <CartesianGrid stroke="#9F9F9F" strokeDasharray="5 5" /> */}
 
-        <Area
-          type="monotone"
-          dataKey="uv"
-          stroke="#000"
-          fill="url(#splitColor)"
-        />
-      </AreaChart>
+        <Bar dataKey="uv" fill="#black" />
+      </BarChart>
     </ResponsiveContainer>
   );
 }
