@@ -197,6 +197,148 @@
   flex-wrap: wrap;
   border-radius: 10px;
 }
+.signin__text__wraper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #c2bdbdb6;
+  border-radius: 20px;
+  padding: 4em 0.2em;
+}
+.signin__text__welcome {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: var(--color);
+}
+.signin__text__btn__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4c857f;
+  border-radius: 60px;
+  max-width: 500px;
+}
+.signin__text__signin {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0em;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  // background-color: #4cb051;
+  cursor: pointer;
+  border-radius: 60px;
+  transition: 0.3s ease-in-out;
+}
+.signin__text__signin:hover {
+  background-color: #2a5e59;
+  transition: 0.3s ease-in-out;
+}
+.signin__text__signup:hover {
+  background-color: #2a5e59;
+  transition: 0.3s ease-in-out;
+}
+.signin__text__signup {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0em;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  border-radius: 60px;
+}
+.signin__text__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em 2em;
+  text-align: center;
+  color: rgb(33, 61, 38);
+  transition: 0.3s ease-in-out;
+}
+.signin__text__input__from {
+  width: 100%;
+  padding: 0em 2em;
+}
+.signin__text__input__row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 1em 0em;
+}
+.signin__text__input__row__label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2a5e59;
+  margin-bottom: 5px;
+}
+.signin__text__input__row__input {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0em;
+  font-size: 14px;
+  padding: 10px 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 60px;
+  outline: none;
+  border: none;
+}
+.signin__text__input__row__input:hover {
+  background-color: #2a5e59;
+}
+.signin__text__input__row__input::placeholder {
+  color: #bdbdbd;
+  outline: none;
+}
+.signin__text__input__row__input::placeholder:hover {
+  color: #2a5e59;
+}
+.signin__text__input__row__submit {
+  width: 200px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0em;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background-color: #2b7971c2;
+  cursor: pointer;
+  border-radius: 60px;
+  transition: 0.3s ease-in-out;
+}
+.signin__text__input__row__submit:hover {
+  background-color: #2a5e59;
+  transition: 0.3s ease-in-out;
+}
+.cart__container__header__heading {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+  position: relative;
+  color: #35bd5750;
+  margin-top: 2em;
+  max-width: 1366px;
+  margin: 0 auto;
+}
 
 @media (max-width: 900px) {
   .container__main__content__details__main__row {

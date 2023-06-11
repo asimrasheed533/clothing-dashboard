@@ -19,7 +19,6 @@ export const sidebarCategories = [
 
 export const sidebarEnteries = [
   {
-    category: "",
     icon: (
       <svg
         width="17"

@@ -3,7 +3,7 @@ import { sidebarCategories, sidebarEnteries } from "global";
 
 import { Fragment } from "react";
 import { X } from "react-feather";
-import { logo } from "assets";
+import { logoweb } from "assets";
 import { useState } from "react";
 
 export default function Sidebar({ setSidebarOpen }) {
@@ -12,7 +12,7 @@ export default function Sidebar({ setSidebarOpen }) {
       <div className="container__sidebar__header">
         <Link to="/dashboard" className="container__sidebar__logo">
           <img
-            src={logo}
+            src={logoweb}
             alt="logo"
             className="container__sidebar__logo__img"
           />
