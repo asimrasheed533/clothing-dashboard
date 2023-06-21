@@ -44,15 +44,6 @@ export default function Categories() {
           <div className="container__main__content__listing__table__header__entry">
             Name
           </div>
-          <div className="container__main__content__listing__table__header__entry">
-            Description
-          </div>
-          <div className="container__main__content__listing__table__header__entry">
-            Parent Category
-          </div>
-          <div className="container__main__content__listing__table__header__entry">
-            Image
-          </div>
         </div>
         <div className="container__main__content__listing__table__content">
           <TableEntry />
@@ -92,14 +83,7 @@ function TableEntry() {
         <TableEntryEditButton />
         <TableEntryDeleteButton />
       </div>
-      <TableEntryText>john devved</TableEntryText>
-      <TableEntryDescription>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor,
-        nisl eget ultricies lacinia, nisl nisl aliquam nisl, eu aliquam nisl
-        nisl sit amet nisl.
-      </TableEntryDescription>
-      <TableEntryText>Choice By Armina</TableEntryText>
-      <TableEntryImage />
+      <TableEntryText>Child</TableEntryText>
     </div>
   );
 }

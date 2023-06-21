@@ -30,7 +30,7 @@ export function VideoUploaderMultiple({
               <X size={20} color="currentColor" />
             </button>
             <video
-              src={URL.createObjectURL(image)}
+              src={image}
               alt={image?.name}
               controls
               className="container__main__content__details__main__input__field__wrapper__image__content__img"
