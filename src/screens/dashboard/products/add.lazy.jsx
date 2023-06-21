@@ -6,12 +6,6 @@ import axios from "../../../utils/axios";
 import { useBackLocation } from "global";
 import { useState } from "react";
 
-// cloudinary.config({
-//   cloud_name: "dsxbqyjwo",
-//   api_key: "388348617117396",
-//   api_secret: "a676b67565c6767a6767d6767f676fe1",
-// });
-
 export default function ProductAdd() {
   const backLocation = useBackLocation();
 

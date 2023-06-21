@@ -1,43 +1,53 @@
-import { Input, Select, Textarea } from "components";
+import { Input } from "components";
 
-import { Link } from "router";
+import { Link, useLocation } from "react-router-dom";
 import { useBackLocation } from "global";
-import { useState } from "react";
-import { ImageUploaderSingle } from "../../../components/ImageUploaderSingle";
+import { useEffect, useState } from "react";
+import axios from "../../../utils/axios";
 
 export default function CategorieEdit() {
-  const [image, setImage] = useState(null);
+  const { state } = useLocation();
   const backLocation = useBackLocation();
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    if (state) {
+      setName(state.name);
+    }
+  }, [state]);
+
+  function handleSubmit(e) {
+    axios
+      .put("categories/" + state._id, {
+        name,
+      })
+      .then((res) => {
+        alert("Categorie edit  successfully");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+
   return (
     <div className="container__main__content__details">
       <div className="container__main__content__details__main container__main__content__details__main__special">
-        <Input type="text" label="Name" placeholder="Enter Name Here" />
-        <Textarea label="Description" placeholder="Enter Description" />
-        <Select
-          label="Parent Category"
-          isMulti
-          placeholder="Enter Parent Category"
-          options={[
-            { value: "1", label: "1" },
-            { value: "2", label: "2" },
-            { value: "3", label: "3" },
-            { value: "4", label: "4" },
-            { value: "5", label: "5" },
-            { value: "6", label: "6" },
-            { value: "7", label: "7" },
-            { value: "8", label: "8" },
-            { value: "9", label: "9" },
-          ]}
+        <Input
+          type="text"
+          label="Categorie Name"
+          placeholder="Enter Categorie Name Here"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
-        <ImageUploaderSingle label="Image" image={image} setImage={setImage} />
       </div>
 
       <div className="container__main__content__details__buttons">
         <Link
           to={backLocation}
+          onClick={handleSubmit}
           className="container__main__content__details__buttons__button container__main__content__details__buttons__primary"
         >
-          Edit
+          Save
         </Link>
         <Link
           to={backLocation}
