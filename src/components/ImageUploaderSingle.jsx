@@ -33,7 +33,7 @@ export function ImageUploaderSingle({
           </div>
         ) : (
           <img
-            src={URL.createObjectURL(image)}
+            src={image}
             alt={image?.name}
             className="container__main__content__details__main__input__field__wrapper__image__content__img"
           />
