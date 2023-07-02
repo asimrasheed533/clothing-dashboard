@@ -3,7 +3,7 @@ import { lazy, useEffect } from "react";
 
 import { useAtom } from "jotai";
 import { userAtom } from "global";
-
+import { WidgetLoader } from "react-cloudinary-upload-widget";
 const Dashboard = lazy(() => import("./Dashboard"));
 
 export default function App() {
@@ -25,6 +25,7 @@ export default function App() {
 
   return (
     <>
+      <WidgetLoader />
       {!location.pathname.toLowerCase().includes("/dashboard") ? (
         <Outlet />
       ) : (

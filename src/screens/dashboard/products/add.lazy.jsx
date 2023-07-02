@@ -1,12 +1,14 @@
 import { Input, Select, Textarea } from "components";
 
-import { ImageUploaderSingle } from "../../../components/ImageUploaderSingle";
-import { Link } from "react-router-dom";
+import ImageUploaderSingle from "../../../components/ImageUploaderSingle";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "../../../utils/axios";
 import { useBackLocation } from "global";
 import { useState } from "react";
+import { categories } from "../../../utils/constants";
 
 export default function ProductAdd() {
+  const navigate = useNavigate();
   const backLocation = useBackLocation();
 
   const [name, setName] = useState("");
@@ -21,7 +23,7 @@ export default function ProductAdd() {
 
   const [category, setCategory] = useState({});
 
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
 
   function handleSubmit(e) {
     axios
@@ -32,10 +34,11 @@ export default function ProductAdd() {
         price,
         stock,
         category: category.value,
-        img: image.name,
+        img: image,
       })
       .then((res) => {
         alert("Product added successfully");
+        navigate(backLocation);
       })
       .catch((err) => {
         console.error(err);
@@ -85,11 +88,11 @@ export default function ProductAdd() {
           />
         </div>
         <div className="product__form__col__panel">
-          <div className="product__form__col__panel__heading">Media</div>
+          <div className="product__form__col__panel__heading">Image</div>
           <ImageUploaderSingle
             label="Image"
-            image={image === null ? null : URL.createObjectURL(image)}
-            setImage={setImage}
+            value={image}
+            onChange={(e) => setImage(e)}
           />
         </div>
       </div>
@@ -100,13 +103,12 @@ export default function ProductAdd() {
             padding: "2em",
           }}
         >
-          <Link
-            to={backLocation}
+          <button
             onClick={handleSubmit}
             className="container__main__content__details__buttons__button container__main__content__details__buttons__primary"
           >
             Add New Product
-          </Link>
+          </button>
           <Link
             to={backLocation}
             className="container__main__content__details__buttons__button container__main__content__details__buttons__secondary"
@@ -117,10 +119,7 @@ export default function ProductAdd() {
         <div className="product__form__col__panel">
           <Select
             label="Product Category"
-            options={[
-              { value: true, label: "Yes" },
-              { value: false, label: "No" },
-            ]}
+            options={categories}
             value={category}
             onChange={(e) => setCategory(e)}
           />

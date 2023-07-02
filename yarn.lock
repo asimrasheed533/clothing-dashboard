@@ -3354,6 +3354,11 @@ react-click-away-listener@^2.2.2:
   resolved "https://registry.yarnpkg.com/react-click-away-listener/-/react-click-away-listener-2.2.2.tgz#933104ae8df6bec1272b5738ebce4b665de16917"
   integrity sha512-6x5Ra+2xagMq+5YcBu42jtht+bKVErgPXaI/GqYP5M8Xz2o/UbGyMd3TISQK6ixfORUTvdHeRnOVU3TbSpZ5Zg==
 
+react-cloudinary-upload-widget@^1.6.0:
+  version "1.7.6"
+  resolved "https://registry.yarnpkg.com/react-cloudinary-upload-widget/-/react-cloudinary-upload-widget-1.7.6.tgz#21403c009923d1aa5c7f4777bea09bdc371ab1c7"
+  integrity sha512-/1VxfHz9gcko3wFsQVqBwRCXfkMFhK7RX95KGQjH5g6J9B/pRO9NQPK8kTVP0Seng8+U+60tW/1VNez7DL0VPQ==
+
 react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"

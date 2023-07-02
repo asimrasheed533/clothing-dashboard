@@ -1,14 +1,12 @@
 import { Input, Select, Textarea } from "components";
 
-import { ImageBanner } from "../../components/ImageBanner";
-import { ImageUploaderSingle } from "../../components/ImageUploaderSingle";
+import ImageUploaderSingle from "../../components/ImageUploaderSingle";
 import { Link } from "router";
 import { useBackLocation } from "global";
 import { useState } from "react";
 
 export default function ContentManagement() {
-  const [banner, setBanner] = useState(null);
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
   const backLocation = useBackLocation();
   return (
     <div className="container__main__content__details">
@@ -16,7 +14,6 @@ export default function ContentManagement() {
         <div className="container__main__content__details__main__row">
           <Input type="text" label="Heading" placeholder="Enter heading" />
         </div>
-        <ImageBanner setImage={setBanner} image={banner} />
         <div
           style={{
             backgroundColor: "black",
@@ -99,7 +96,13 @@ export default function ContentManagement() {
         </div>
         <Input type="text" label="Heading" placeholder="abc" />
         <Textarea label="Description" placeholder="Enter Description" />
-        <ImageUploaderSingle label="Image" image={image} setImage={setImage} />
+        <ImageUploaderSingle
+          label="Image"
+          value={image}
+          onChange={(e) => {
+            setImage(e);
+          }}
+        />
         {/* <ImageUploaderMultiple
           label="Image"
           images={images}

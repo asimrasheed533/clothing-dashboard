@@ -1,52 +1,52 @@
-import { Input } from "components";
+import { Input, Select, Textarea } from "components";
 
-import { Link } from "react-router-dom";
+import ImageUploaderSingle from "../../../components/ImageUploaderSingle";
+import { Link } from "router";
+import axios from "../../../utils/axios";
 import { useBackLocation } from "global";
 import { useState } from "react";
-import axios from "../../../utils/axios";
 
 export default function CategorieAdd() {
-  const backLocation = useBackLocation();
   const [name, setName] = useState("");
-
-  function handleSubmit(e) {
-    axios
-      .post("categories/", {
-        name,
-      })
-      .then((res) => {
-        alert("Categorie new Add  successfully");
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }
-
+  const [image, setImage] = useState("");
+  const backLocation = useBackLocation();
   return (
     <div className="container__main__content__details">
       <div className="container__main__content__details__main container__main__content__details__main__special">
         <Input
           type="text"
-          label="Categorie Name"
-          placeholder="Enter Categorie Name Here"
+          label="Name"
+          placeholder="Enter name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+        />
+        <ImageUploaderSingle
+          label="Image"
+          value={image}
+          onChange={(e) => {
+            setImage(e);
+          }}
         />
       </div>
 
       <div className="container__main__content__details__buttons">
         <Link
           to={backLocation}
-          onClick={handleSubmit}
+          onClick={() => {
+            axios.post("categories", {
+              name,
+              img: image,
+            });
+          }}
           className="container__main__content__details__buttons__button container__main__content__details__buttons__primary"
         >
-          Save
+          Add
         </Link>
         <Link
           to={backLocation}
           className="container__main__content__details__buttons__button container__main__content__details__buttons__secondary"
         >
-          Discard
+          Delect
         </Link>
       </div>
     </div>
