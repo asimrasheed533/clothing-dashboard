@@ -14,8 +14,7 @@ export default function Index() {
       <div className="signin__text__wraper">
         <div className="signin__text__welcome"> Welcome To Food Severy</div>
         <div className="signin__text__btn__row">
-          <div className="signin__text__signin">Sign In</div>
-          <div className="signin__text__signup">Register</div>
+          <div className="signin__text__signin">Login</div>
         </div>
 
         <form

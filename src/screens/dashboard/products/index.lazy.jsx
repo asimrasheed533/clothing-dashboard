@@ -156,31 +156,6 @@ function TableEntry({ product, getData }) {
             });
         }}
       />
-      {/* <TableEntryStatus
-        defaultValue={{
-          value: product.isFeatured,
-          label: product.isFeatured ? "Featured" : "Not Featured",
-        }}
-        options={[
-          {
-            value: true,
-            label: "Featured",
-          },
-          {
-            value: false,
-            label: "Not Featured",
-          },
-        ]}
-        onChange={(e) => {
-          axios
-            .put(`products/${product._id}`, {
-              isFeatured: e.value,
-            })
-            .then(() => {
-              getData();
-            });
-        }}
-      /> */}
       <TableEntryImage src={product.img} />
       <TableEntryText className="container__main__content__listing__table__content__list__entry">
         {product.name}

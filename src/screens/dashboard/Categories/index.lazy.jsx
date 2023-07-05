@@ -49,10 +49,6 @@ export default function Categories() {
           <div className="container__main__content__listing__table__header__entry">
             Name
           </div>
-
-          <div className="container__main__content__listing__table__header__entry">
-            Image
-          </div>
         </div>
         <div className="container__main__content__listing__table__content">
           {loading ? (
@@ -79,9 +75,6 @@ function TableEntry({ item }) {
         />
       </div>
       <TableEntryText>{item?.name}</TableEntryText>
-      <TableEntryImage
-        src={import.meta.env.VITE_CLOUDNAIRY_API_URL + item?.img}
-      />
     </div>
   );
 }
