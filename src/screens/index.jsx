@@ -1,16 +1,16 @@
-import { avatar, logoweb } from "assets";
-
 import { LoginInput } from "components";
 import { useAtom } from "jotai";
+import axios from "../utils/axios";
 import { useNavigate } from "react-router-dom";
 import { userAtom } from "global";
+import { useState } from "react";
 
 export default function Index() {
+  const [processing, setProcessing] = useState(false);
   const navigate = useNavigate();
   const [, setUser] = useAtom(userAtom);
   return (
     <>
-      {/* <div className="login__container"></div> */}
       <div className="signin__text__wraper">
         <div className="signin__text__welcome"> Welcome To Food Severy</div>
         <div className="signin__text__btn__row">
@@ -21,40 +21,50 @@ export default function Index() {
           className="login__container__form"
           onSubmit={(e) => {
             e.preventDefault();
-            setUser({
-              profilePic: avatar,
-              name: "John doe",
-            });
-            navigate("/dashboard", { replace: true });
+            setProcessing(true);
+            if (e.target.email.value === "" || e.target.password.value === "") {
+              alert("Please fill all the fields");
+              setProcessing(false);
+              return;
+            } else if (e.target.email.value === "") {
+              alert("Please fill email field");
+              setProcessing(false);
+              return;
+            } else if (e.target.password.value === "") {
+              alert("Please fill password field");
+              setProcessing(false);
+              return;
+            } else {
+              axios
+                .post("/users/login", {
+                  email: e.target.email.value,
+                  password: e.target.password.value,
+                })
+                .then((res) => {
+                  setProcessing(false);
+                  setUser({
+                    name: res.data.email,
+                  });
+                  navigate("/dashboard", { replace: true });
+                });
+            }
           }}
         >
-          <img
-            src={logoweb}
-            alt="logo"
-            className="login__container__form__logo"
+          <LoginInput
+            label="Email"
+            placeholder="Enter email"
+            type="email"
+            id="email"
           />
-          <div className="signin__text__input__row">
-            <div className="signin__text__input__row__label">Email</div>
-            <input
-              type="text"
-              className="signin__text__input__row__input"
-              placeholder="Enter Your Email"
-            />
-          </div>
-          <div className="signin__text__input__row">
-            <div className="signin__text__input__row__label">Password</div>
-            <input
-              type="text"
-              className="signin__text__input__row__input"
-              placeholder="Enter Your Password"
-            />
-          </div>
-          <input
-            type="submit"
-            value="Sign In"
-            className="signin__text__input__row__submit
-                "
+          <LoginInput
+            label="Password"
+            placeholder="Enter password"
+            type="password"
+            id="password"
           />
+          <button type="submit" className="login__container__form__button">
+            {processing ? "wait...." : "Login"}
+          </button>
         </form>
       </div>
     </>
