@@ -1,4 +1,3 @@
-import ImageUploaderSingle from "../../../components/ImageUploaderSingle";
 import { Input } from "components";
 import { Link } from "router";
 import axios from "../../../utils/axios";
@@ -20,13 +19,6 @@ export default function CategorieEdit() {
           placeholder="Enter Name Here"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
-        <ImageUploaderSingle
-          label="Image"
-          value={image}
-          onChange={(e) => {
-            setImage(e);
-          }}
         />
       </div>
 

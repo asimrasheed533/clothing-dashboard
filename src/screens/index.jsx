@@ -12,7 +12,7 @@ export default function Index() {
   return (
     <>
       <div className="signin__text__wraper">
-        <div className="signin__text__welcome"> Welcome To Food Severy</div>
+        <div className="signin__text__welcome"> Welcome To clothing</div>
         <div className="signin__text__btn__row">
           <div className="signin__text__signin">Login</div>
         </div>

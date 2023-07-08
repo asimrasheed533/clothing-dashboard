@@ -1,6 +1,5 @@
-import { Input, Select, Textarea } from "components";
+import { Input } from "components";
 
-import ImageUploaderSingle from "../../../components/ImageUploaderSingle";
 import { Link } from "router";
 import axios from "../../../utils/axios";
 import { useBackLocation } from "global";
@@ -19,13 +18,6 @@ export default function CategorieAdd() {
           placeholder="Enter name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
-        <ImageUploaderSingle
-          label="Image"
-          value={image}
-          onChange={(e) => {
-            setImage(e);
-          }}
         />
       </div>
 
