@@ -107,7 +107,7 @@ export default function ProductAdd() {
             onClick={handleSubmit}
             className="container__main__content__details__buttons__button container__main__content__details__buttons__primary"
           >
-            Add New Product
+            Add Product
           </button>
           <Link
             to={backLocation}
