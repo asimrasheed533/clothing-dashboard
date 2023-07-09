@@ -156,7 +156,10 @@ function TableEntry({ product, getData }) {
             });
         }}
       />
-      <TableEntryImage src={product.img} />
+      <TableEntryImage
+        // src={import.meta.env.VITE_CLOUDNAIRY_API_URL + product.img}
+        src={product.img}
+      />
       <TableEntryText className="container__main__content__listing__table__content__list__entry">
         {product.name}
       </TableEntryText>
