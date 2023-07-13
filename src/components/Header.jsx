@@ -4,7 +4,7 @@ import { sidebarEnteries, userAtom } from "global";
 import { useLocation, useNavigate } from "react-router-dom";
 import ClickAwayListener from "react-click-away-listener";
 import { Link } from "router";
-import { ThemeSwitch } from "components";
+// import { ThemeSwitch } from "components";
 import { useAtom } from "jotai";
 
 export default function Header({ setSidebarOpen }) {
@@ -124,9 +124,9 @@ export default function Header({ setSidebarOpen }) {
             </ClickAwayListener>
           )}
         </div>
-        <div className="container__main__header__right__button">
+        {/* <div className="container__main__header__right__button">
           <ThemeSwitch />
-        </div>
+        </div> */}
       </div>
     </div>
   );
