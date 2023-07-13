@@ -2,8 +2,6 @@ import { ArrowLeft, ChevronDown, LogOut, Menu, User } from "react-feather";
 import { Fragment, useEffect, useState } from "react";
 import { sidebarEnteries, userAtom } from "global";
 import { useLocation, useNavigate } from "react-router-dom";
-
-import Avatar from "./Avatar";
 import ClickAwayListener from "react-click-away-listener";
 import { Link } from "router";
 import { ThemeSwitch } from "components";
@@ -65,7 +63,7 @@ export default function Header({ setSidebarOpen }) {
               <ArrowLeft size={20} color="currentColor" />
             </button>
             <div className="container__main__header__left__icon">
-              <User size={20} color="currentColor" />
+              <User size={10} color="currentColor" />
             </div>
           </>
         )}
@@ -90,11 +88,6 @@ export default function Header({ setSidebarOpen }) {
             className="container__main__header__right__panel__main"
             onClick={() => setProfilePanelOpen(!profilePanelOpen)}
           >
-            <Avatar
-              src={user?.profilePic}
-              alt="user"
-              className="container__main__header__right__panel__main__img"
-            />
             <div className="container__main__header__right__panel__main__label">
               {user?.name?.length > 20
                 ? user?.name.substring(0, 20) + "..."
@@ -109,7 +102,7 @@ export default function Header({ setSidebarOpen }) {
               }}
             >
               <div className="container__main__header__right__panel__content">
-                <Link
+                {/* <Link
                   to="/dashboard/profile"
                   replace={true}
                   className="container__main__header__right__panel__content__entry"
@@ -117,7 +110,7 @@ export default function Header({ setSidebarOpen }) {
                 >
                   <User size={20} color="currentColor" />
                   Profile
-                </Link>
+                </Link> */}
                 <Link
                   to="/"
                   onClick={() => setUser(null)}
