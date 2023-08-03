@@ -1,7 +1,6 @@
 import {
   TableEntryDeleteButton,
   TableEntryEditButton,
-  TableEntryImage,
   TableEntryText,
 } from "components";
 import { useEffect, useState } from "react";
